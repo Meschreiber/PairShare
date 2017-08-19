@@ -1,7 +1,7 @@
 {
-  "name": "__BONES_NEEDS_A_NAME__",
+  "name": "pairshare",
   "version": "0.0.1",
-  "description": "A happy little burning skeleton.",
+  "description": "Collecting and visualizing pair programming feedback",
   "main": "index.js",
   "engines": {
     "node": ">= 7.0.0"
@@ -17,27 +17,19 @@
     "build-dev": "cross-env NODE_ENV=development npm run build-watch",
     "build-branch": "bin/build-branch.sh",
     "start": "firebase serve",
-    "test": "mocha --compilers js:babel-register --watch-extensions js,jsx app/**/*.test.js app/**/*.test.jsx server/**/*.test.js fire/**/*.test.js",
-    "test-watch": "npm run test -- --watch --reporter=min",
-    "seed": "node db/seed.js",
     "lint": "esw . --ignore-path .gitignore --ext '.js,.jsx'",
     "lint-watch": "npm run lint -- -w"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/queerviolet/bones.git"
+    "url": "git+https://github.com/Meschreiber/PairShare"
   },
-  "keywords": [
-    "react",
-    "redux",
-    "skeleton"
-  ],
-  "author": "Ashi Krishnan <me@ashi.works>",
+  "author": "Maria Schreiber",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/queerviolet/bones/issues"
+    "url": "https://github.com/Meschreiber/PairShare/issues"
   },
-  "homepage": "https://github.com/queerviolet/bones#readme",
+  "homepage": "https://github.com/Meschreiber/PairShare#readme",
   "dependencies": {
     "axios": "^0.15.2",
     "babel-preset-stage-2": "^6.18.0",

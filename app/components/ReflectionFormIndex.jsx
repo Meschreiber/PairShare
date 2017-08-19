@@ -1,21 +1,24 @@
+// A necessary glue? 
+
 import React from 'react'
 import {Route} from 'react-router'
 import firebase from 'APP/fire'
 const db = firebase.database()
-    , auth = firebase.auth()
 
-import Chat from './Chat'
+import ReflectionForm from './ReflectionForm'
 
-// This component is a little piece of glue between React router
-// and our Scratchpad component. It takes in props.params.title, and
-// shows the Scratchpad along with that title.
-export default ({params: {room}}) =>
+// This component is a little piece of glue between React router (in main.jsx)
+// and our form component. It takes in props.params.name and
+// shows the form along with that title.
+export default ({params: {name}}) =>
   <div>
-    <h1>{room}</h1>
     {/* Here, we're passing in a Firebase reference to
         /scratchpads/$scratchpadTitle. This is where the scratchpad is
         stored in Firebase. Each scratchpad is just a string that the
         component will listen to, but it could be the root of a more complex
-        data structure if we wanted. */}
-    <Chat auth={auth} fireRef={db.ref('chatrooms').child(room)}/>
+        data structure if we wanted. 
+      fireRef={db.ref('reflections').child(name)}
+    */}
+    <ReflectionForm />
   </div>
+  
