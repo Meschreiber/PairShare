@@ -86,7 +86,7 @@ export default class extends React.Component {
 
             <li id="plays-nice" className="starRating">
               <fieldset>
-                <legend >Plays Nice with Others</legend>
+                <legend >Cooperative and Pleasant to Work With</legend>
                 <div className="field rating clearfix">
                   <input type="hidden" />
                   <span onClick={this.nStarClick} className="playsNice star clickable" value="1" >★</span>
@@ -155,19 +155,18 @@ export default class extends React.Component {
             </li>
 
             <p>Would you like to share this feedback (strengths) anonymously or non-anonymously?</p>
-            <div>
+            <div className="input">
               <label>
                 <input type="radio" />Anonymously
                 </label>
-              <br />
             </div>
-            <div>
+            <div className="input">
               <label>
                 <input type="radio" />Put my name on it!
                 </label>
-              <br />
-            </div>
 
+            </div>
+            <br />
             <br />
             <li id="improvements" className="notranslate">
               <label className="commentary">Give one specific suggestion on how they could improve as a developer and/or team member.</label>
@@ -181,45 +180,44 @@ export default class extends React.Component {
               </div>
 
               <p >Would you like to share this feedback (areas of improvement) anonymously or non-anonymously?</p>
-              <div>
+              <div className="input">
                 <label>
                   <input type="radio" />Anonymously
                 </label>
-                <br />
+
               </div>
-              <div>
+              <div className="input">
                 <label>
                   <input type="radio" />Put my name on it!
                 </label>
-                <br />
+
               </div>
             </li>
 
             <li>
               <p >Please tell us if you would like to pair with Allison Alexander in the future. We will keep this confidential.</p>
-              <div>
+              <div className="input">
                 <label>
                   <input type="radio" />Yes, please!
             </label>
-                <br />
               </div>
-              <div>
+              <div className="input">
                 <label>
                   <input type="radio" />
                   I don't mind either way.
             </label>
-                <br />
+
               </div>
-              <div>
+              <div className="input">
                 <label>
                   <input type="radio" />I'd prefer not to, thanks.</label>
-                <br />
               </div>
-              <br />
-              <label><input type="checkbox" />I want to talk to someone about this pairing</label>
             </li>
-            <button className="btn btn-primary mt1">Submit</button>
           </ul>
+          <div className="input">
+            <label><input type="checkbox" />I want to talk to someone about this pairing</label>
+          </div>
+          <button className="btn btn-primary submit">Submit</button>
         </form>
       </div >
     )

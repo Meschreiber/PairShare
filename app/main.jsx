@@ -6,7 +6,7 @@ import FormIndex from './components/FormIndex'
 import ReflectionFormIndex from './components/ReflectionFormIndex'
 import FeedbackViz from './components/FeedbackViz'
 import Viewbar from './components/Viewbar'
-
+import '../public/stylesheets/style.css'
 import firebase from 'APP/fire'
 
 // Our root App component just renders a little frame with a nav

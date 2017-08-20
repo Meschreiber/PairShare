@@ -134,7 +134,7 @@ const strengthComments = [
   'Maria put in extra work after hours, but kept things on a separate branch so she could show me the next day.',
   'Maria didn\'t have a clue about SQL but she was a great student when I tried to get her up to speed.',
   'Maria is a really great navigator -- she has docs and references handy and thinks in terms of the big picture.',
-  'Maria really knows her stuff. She clearly read and re-read the pre-reading and took detailed notes during the lecture. She was also able to communicate her ideas clearly',
+  'Maria really knows her stuff. She clearly read and re-read the pre-reading and took detailed notes during the lecture.',
   'Maria was super driven to finish the workshop even though we were lagging sometimes.',
   'her energy and optimism are wonderful!',
   'Maria has got a great handle on React Router',

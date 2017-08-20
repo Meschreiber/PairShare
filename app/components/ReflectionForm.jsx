@@ -133,7 +133,7 @@ export default class extends React.Component {
 
             <li id="plays-nice" className="starRating">
               <fieldset>
-                <legend >Plays Nice with Others</legend>
+                <legend >Cooperative and Pleasant to Work With</legend>
                 <div className="field rating clearfix">
                   <input type="hidden" />
                   <span onClick={this.nStarClick} className={reflection.playsNice >= 1 ? "playsNice star clicked" : "playsNice star clickable" } value="1" >★</span>
@@ -187,7 +187,7 @@ export default class extends React.Component {
                 </div>
               </fieldset>
             </li>
-            <br />
+            
             <li id="strengths">
               <label className="commentary">What was one of your greatest strengths as a pair programmer this week?  This can include either qualities and/or technical skills.</label>
               <div>
@@ -200,7 +200,7 @@ export default class extends React.Component {
                 />
               </div>
             </li>
-            <br />
+            
             <li id="improvements" className="notranslate">
               <label className="commentary">What is one thing you would like to improve upon or learn about for next week?</label>
               <div>
@@ -213,7 +213,7 @@ export default class extends React.Component {
                 />
               </div>
             </li>
-            <button className="btn btn-primary mt1">Submit</button>
+            <button className="btn btn-primary submit">Submit</button>
           </ul>
         </form>
       </div>

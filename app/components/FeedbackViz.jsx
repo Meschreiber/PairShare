@@ -24,6 +24,12 @@ export default (props) => {
           <div id="radar">
             <h3>Peer and Self Evaluations</h3>
             <RadarChart theWeek={theWeek} />
+            <div id="legend">
+            <span className="legend" >peer</span>
+            <span className="legend" id="orange" >•</span>
+            <span className="legend" >self</span>
+            <span className="legend" id="blue" >•</span>
+        </div>
           </div>
         </div>
         <div id="allComments">

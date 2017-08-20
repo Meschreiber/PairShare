@@ -1,6 +1,4 @@
-
 body {
-    margin: 17px 5px 15px 5px;
     padding: 0;
     text-align: left;
     font-size: small;
@@ -8,17 +6,27 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* h1, h2, h3, h4, h5, h6 {
-  margin: 17px 10px 15px 10px;
-  letter-spacing: 1.5px;
-} */
+#app {
+  margin: 50px;
+  margin-top: 0px;
+}
 
 h1 {
   border-bottom: 1px dotted #CCCCCC;
 }
 
+h3 {
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+
 ul {
 -webkit-padding-start: 0px;
+padding-left: 5px;
+}
+
+ul#form {
+  margin-left: 10px
 }
 
 li {
@@ -34,13 +42,13 @@ a:visited {
   }  
 
 .formContainer {
-  margin: 0 200px;
+  margin: 0 180px;
   font-size: 16px;
 }
 
 button {
-    color: #fff;
-    background-color: #2e88c4;
+    color: #444;
+    background-color: white;
     border-radius: 3px;
     cursor: pointer;
     padding: 8px 16px;
@@ -54,11 +62,33 @@ input {
   margin: 0 10px;
 }
 
+svg {
+  margin-top: -25px;
+}
 
-
-/*-------General Feedback Page--------*/
+/*------- Feedback Visualizer--------*/
 #main {
-    border: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.legend {
+  padding: 10px;
+}
+
+#legend {
+  text-align: center;
+  margin-top: -40px;
+  margin-bottom: 20px;
+}
+
+#orange {
+  color: #ff7f0e;
+  font-size: 25px;
+}
+
+#blue {
+  color: #1f77b4;
+  font-size: 25px;
 }
 
 .chartWrapper {
@@ -66,16 +96,24 @@ input {
 }
 #radar {
   float: left;
-  width: 38%;
+  width: 45%;
   text-align: center;
   vertical-align: middle;
   margin-bottom: 5%;
+  border-bottom: 1px black solid;
 }
 
 #allComments{
   float: left;
-  width: 59%;
-  border-left: 2px solid black;
+  width: 54%;
+  border-left: 2px dotted #444;
+  text-align: center;
+  padding-bottom: 47px;
+  border-bottom: 1px black solid;
+}
+
+.commentContainer + h3 {
+  text-align: center;
 }
 
 /*-------Feedback Page Navbar--------*/
@@ -83,15 +121,17 @@ input {
 #currentWeek {
       text-transform: uppercase;
       font-size: 1.25em;
+      width: 150px;
+      text-align: center;
 }
-.navbar-nav ul {
+ul.navbar-nav  {
     list-style-type: none;
-    text-align: center;
-    margin: 0;
+    margin: 2px;
     padding: 0;
-    text-align: center !important;
-    float: left;
     width: 80%;
+    text-align: center;
+    flex: 19;
+
 }
 
 .navbar-nav li {
@@ -104,19 +144,26 @@ input {
   border-radius: 0;
 }
 
-  .navbar .navbar-nav a.active {
-    background: transparent;
-    position: relative; }
-    .navbar .navbar-nav a.active:hover, .navbar .navbar-nav a.active:focus {
-      background: transparent; }
-    .navbar .navbar-nav a.active::before {
-      position: absolute;
-      bottom: 0;
-      content: '';
-      left: calc(50% - 0.8em);
-      border-bottom: 0.6em solid #555;
-      border-right: 0.8em solid transparent;
-      border-left: 0.8em solid transparent; }
+.navbar .navbar-nav a.active {
+  background: transparent;
+  position: relative; }
+  .navbar .navbar-nav a.active:hover, .navbar .navbar-nav a.active:focus {
+    background: transparent; }
+  .navbar .navbar-nav a.active::before {
+    position: absolute;
+    bottom: 0;
+    content: '';
+    left: calc(50% - 0.8em);
+    border-bottom: 0.6em solid #555;
+    border-right: 0.8em solid transparent;
+    border-left: 0.8em solid transparent; }
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 
 .week-button {
   background-color: white;
@@ -126,9 +173,12 @@ input {
 }
 
 .viewAll {
-  float: right;
   width: 10%;
+  background-color: white;
+  color: #444;
   margin: 13px;
+  flex: 1;
+  text-align: right;
 }
 
 #viewAll {
@@ -157,14 +207,17 @@ li.comment{
 .commentContainer {
   display: inline-block;
   width: 45%;
-  padding: 0 2%;
+  margin-left: 10px;
 }
 
 .comments {
   margin: 10px;
   overflow-y: scroll; 
   border: 1px solid lightgray;
-  height: 400px;
+  background-color: 
+  #fafafa;
+  height: 425px;
+  border-radius: 10px;
 }
 
 blockquote {
@@ -173,10 +226,6 @@ blockquote {
     margin: 1em 2em 3em 0;
     color: #fff;
     background: #075698;
-    background: -webkit-gradient(linear, 0 0, 0 100%, from(#2e88c4), to(#075698));
-    background: -moz-linear-gradient(#2e88c4, #075698);
-    background: -o-linear-gradient(#2e88c4, #075698);
-    background: linear-gradient(#2e88c4, #075698);
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -192,6 +241,11 @@ blockquote:after {
     border-color: #075698 transparent;
     display: block;
     width: 0;
+}
+
+blockquote > p {
+  padding: 0 10px;
+  text-align: left;
 }
 
 blockquote + p {
@@ -281,14 +335,21 @@ form li span {
 }
 
 textarea {
-  margin: 10px;
+  margin: 20px 10px 0px 10px
+}
+
+.submit {
+  margin: 15px 20px 30px
+}
+
+.input {
+  margin: 10px 0;
 }
 
 
 /*-------Viewbar--------*/
 
 #views {
-  width: 100%;
   background-color:darkslategrey;
   text-align: center;
   padding: 5px;
@@ -308,3 +369,14 @@ textarea {
   letter-spacing: 1px;
 }
 
+
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0,0,0,.5);
+  -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+}
