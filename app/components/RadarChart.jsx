@@ -2,7 +2,8 @@ import React from 'react'
 import Radar from 'react-d3-radar'
 
 const RadarChart = (props) => {
-  const { self, peer } = props
+  const peerRatings = props.theWeek.ratings[0].values
+  const selfRatings = props.theWeek.ratings[1].values
 
   return (
     <Radar
@@ -31,22 +32,22 @@ const RadarChart = (props) => {
             key: 'self',
             label: 'Self Evaluation',
             values: {
-              communication: 4,
-              cooperation: 5,
-              openness: 3.5,
-              organized: 2,
-              independent: 4,
+              communication: selfRatings[0].y,
+              cooperation: selfRatings[1].y,
+              openness: selfRatings[2].y,
+              organized: selfRatings[3].y,
+              independent: selfRatings[4].y,
             },
           },
           {
             key: 'peer',
             label: 'Peer Evaluation',
             values: {
-              communication: 1,
-              cooperation: 5,
-              openness: 3,
-              organized: 2.5,
-              independent: 4,
+              communication: peerRatings[0].y,
+              cooperation: peerRatings[1].y,
+              openness: peerRatings[2].y,
+              organized: peerRatings[3].y,
+              independent: peerRatings[4].y,
             },
           },
         ],

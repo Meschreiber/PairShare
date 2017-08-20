@@ -13,13 +13,13 @@ const Viewbar = () =>
   <div>
     <ul className="viewbar">
       <li>
-        <Link to="/reflection/mschreiber" activeClassName="active">Self Reflection Form</Link>
+        <Link to="/form/aalexander" activeClassName="active">Pair Feedback</Link>
       </li>
       <li>
-        <Link to="/form/aalexander" activeClassName="active">Partner Feedback Form</Link>
+        <Link to="/reflection/mschreiber" activeClassName="active">Self Reflection</Link>
       </li>
       <li>
-        <Link to="/feedback/week/1" activeClassName="active">Feedback Visualization</Link>
+        <Link to="/feedback/week/1" activeClassName="active">Summary</Link>
       </li>
     </ul>
   </div>

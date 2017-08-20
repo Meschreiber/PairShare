@@ -107,8 +107,7 @@ export default class extends React.Component {
   render() {
     const reflection = this.state
     return (
-      <div>
-
+      <div className="formContainer">
         <header id="header" className="info">
           <h2>Self Reflection Form</h2>
           <div id="info">

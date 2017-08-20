@@ -15,31 +15,28 @@ class Navbar extends React.Component {
     return (
       <nav className="navbar navbar-default">
         <div className="container">
-
-          <div className="collapse navbar-collapse">
             <ul className="nav navbar-nav">
               <li>
                 <Link to={`/feedback/week/${+this.props.weekId - 1}`}>
                   <button disabled={+this.props.weekId === 1} className="week-button">
-                    ❮ Previous week </button>
+                    ❮  </button>
                 </Link>
               </li>
               <li id='currentWeek'> {this.props.title} </li>
               <li>
                 <Link to={`/feedback/week/${+this.props.weekId + 1}`}>
                   <button disabled={+this.props.weekId > 6} className="week-button">
-                    Next week ❯
+                     ❯
                 </button>
                 </Link>
               </li>
-              <li>
+              </ul>
+              <div className="viewAll">
                 <Link to="/feedback/week/8">
-                  <button className="week-button">Summary</button>
+                  <button id="viewAll" >View All</button>
                 </Link>
-              </li>
-            </ul>
+              </div>
           </div>
-        </div>
       </nav>
     )
   }

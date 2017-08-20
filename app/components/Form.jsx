@@ -60,9 +60,9 @@ export default class extends React.Component {
   render() {
     const reflection = this.state
     return (
-      <div>
+      <div className="formContainer">
         <header id="header" className="info">
-          <h2>Partner Feedback Form</h2>
+          <h2>Rate Your Pairing Experience</h2>
           <div id="info">
             <p>Please use this opportunity to give constructive criticism to your partner.  All feedback can be shared anonymously if selected.</p>
           </div>
@@ -148,7 +148,7 @@ export default class extends React.Component {
                 <textarea
                   className="field textarea medium"
                   rows="10"
-                  cols="150"
+                  cols="90"
                   onChange={this.writeStrength}
                 />
               </div>
@@ -175,7 +175,7 @@ export default class extends React.Component {
                 <textarea
                   className="field textarea medium"
                   rows="10"
-                  cols="150"
+                  cols="90"
                   onChange={this.writeImprovement}
                 />
               </div>
@@ -215,11 +215,6 @@ export default class extends React.Component {
                   <input type="radio" />I'd prefer not to, thanks.</label>
                 <br />
               </div>
-              <br />
-              <textarea
-                placeholder="Leave an optional comment"
-                rows="2"
-                cols="150" />
               <br />
               <label><input type="checkbox" />I want to talk to someone about this pairing</label>
             </li>
